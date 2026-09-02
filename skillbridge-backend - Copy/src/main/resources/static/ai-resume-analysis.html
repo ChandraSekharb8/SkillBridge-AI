@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analysis - SkillBridge AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SkillBridge <span>AI</span></div>
+        <div class="nav-links" id="navLinks"></div>
+    </nav>
+
+    <section class="tool-page-section">
+        <div class="tool-page-header">
+            <p class="tagline">AI Resume Analysis</p>
+            <h1>Analyze Your Resume With AI</h1>
+            <p>
+                Upload your resume PDF and get ATS score, strong points, weak points,
+                missing skills, project improvement suggestions, and interview preparation tips.
+            </p>
+        </div>
+
+        <div class="tool-grid">
+            <div class="tool-panel">
+                <h2>Step 1: Upload Resume</h2>
+                <p>Upload your resume PDF. The latest uploaded resume will be used for analysis.</p>
+
+                <form id="resumeUploadForm">
+                    <input type="file" id="resumeFile" accept=".pdf" required>
+                    <button type="submit">Upload Resume</button>
+                </form>
+
+                <p id="uploadMessage" class="message-text"></p>
+            </div>
+
+            <div class="tool-panel">
+                <h2>Step 2: Analyze Resume</h2>
+                <p>Click the button below to analyze your active resume using AI.</p>
+
+                <button onclick="analyzeResumeWithAi()">Analyze Resume with AI</button>
+            </div>
+        </div>
+
+        <div class="tool-panel result-panel">
+            <h2>AI Resume Analysis Result</h2>
+
+            <div id="aiAnalysisResult" class="result-box">
+                Your resume analysis result will appear here.
+            </div>
+        </div>
+    </section>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/ai-resume-analysis.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>AI Resume Builder - SkillBridge AI</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav class="navbar"><div class="logo">SkillBridge <span>AI</span></div><div class="nav-links" id="navLinks"></div></nav>
+<section class="tool-page-section">
+    <div class="tool-page-header"><p class="tagline">AI Resume Builder</p><h1>Create a Tailored Resume for Any Job</h1><p>Upload your resume PDF, paste a job description, and generate an ATS-friendly resume draft.</p></div>
+    <div class="tool-grid">
+        <div class="tool-panel"><h2>Step 1: Upload Resume</h2><p>Your latest uploaded resume will become active for this tool.</p><form id="resumeUploadForm"><input type="file" id="resumeFile" accept=".pdf" required><button type="submit">Upload Resume</button></form><p id="uploadMessage" class="message-text"></p><div class="active-file-card"><p id="activeResumeName">No resume uploaded yet.</p></div><p id="resumeStatus" class="message-text"></p></div>
+        <div class="tool-panel"><h2>Step 2: Paste Job Description</h2><p>Paste the full JD so AI can tailor your resume properly.</p><textarea id="jobDescription" placeholder="Paste job description here..."></textarea><button onclick="generateTailoredResume()">Generate Tailored Resume</button><button id="downloadResumeBtn" onclick="downloadGeneratedResume()" class="secondary-btn" style="display:none;">Download Generated Resume</button></div>
+    </div>
+    <div class="tool-panel result-panel"><h2>Generated Resume Preview</h2><div id="resumeBuilderResult" class="result-box">Your generated resume will appear here.</div></div>
+</section>
+<script src="js/navbar.js"></script><script src="js/resume-builder.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Coach - SkillBridge AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SkillBridge <span>AI</span></div>
+        <div class="nav-links" id="navLinks"></div>
+    </nav>
+
+    <section class="tool-page-section">
+        <div class="tool-page-header">
+            <p class="tagline">Interview Coach</p>
+            <h1>Prepare for Interviews</h1>
+            <p>Choose one training mode, give the required input on the right side, and get your result below.</p>
+        </div>
+
+        <div class="interview-coach-layout">
+
+            <div class="tool-panel interview-left-panel">
+                <h2>Choose Training Mode</h2>
+                <p>Select what you want to practice.</p>
+
+                <div class="coach-mode-list">
+                    <button onclick="showTrainOnResume()">Train on Resume</button>
+                    <button onclick="showTrainOnJobDescription()">Train on JD</button>
+                    <button onclick="showPracticeAnswers()">Practice Answers</button>
+                    <button onclick="showBestAnswer()">Best Answer</button>
+                </div>
+            </div>
+
+            <div class="tool-panel interview-right-panel">
+                <div id="emptyCoachBox" class="coach-dynamic-box">
+                    <h2>Start Interview Training</h2>
+                    <p>Select any training mode from the left side.</p>
+                </div>
+
+                <div id="trainResumeBox" class="coach-dynamic-box hidden-tool-box">
+                    <h2>Train on Resume</h2>
+                    <p>Upload your resume and choose a question type.</p>
+
+                    <form id="resumeUploadForm">
+                        <input type="file" id="resumeFile" accept=".pdf" required>
+                        <button type="submit">Upload Resume</button>
+                    </form>
+
+                    <p id="uploadMessage" class="message-text"></p>
+
+                    <div class="resume-question-tabs">
+                        <button onclick="generateTypedInterviewQuestions('HR')">HR Questions</button>
+                        <button onclick="generateTypedInterviewQuestions('PROJECT')">Project Questions</button>
+                        <button onclick="generateTypedInterviewQuestions('RESUME')">Resume Questions</button>
+                    </div>
+                </div>
+
+                <div id="trainJdBox" class="coach-dynamic-box hidden-tool-box">
+                    <h2>Train on JD</h2>
+                    <p>Paste the job description. AI will train you for that role using your active resume.</p>
+
+                    <textarea id="interviewJobDescription" placeholder="Paste job description here..."></textarea>
+
+                    <button onclick="generateJobInterviewTraining()">Start JD Training</button>
+                </div>
+
+                <div id="practiceAnswerBox" class="coach-dynamic-box hidden-tool-box">
+                    <h2>Practice Answers</h2>
+                    <p>Paste an interview question and type your answer. AI will improve it.</p>
+
+                    <textarea id="improveInterviewQuestion" placeholder="Paste interview question here..."></textarea>
+                    <textarea id="candidateAnswer" placeholder="Type your answer here..."></textarea>
+
+                    <button onclick="improveMyAnswer()">Improve My Answer</button>
+                </div>
+
+                <div id="bestAnswerBox" class="coach-dynamic-box hidden-tool-box">
+                    <h2>Best Answer</h2>
+                    <p>Paste an interview question. AI will generate a strong answer based on your active resume.</p>
+
+                    <textarea id="interviewQuestion" placeholder="Example: Explain your SkillBridge AI project."></textarea>
+
+                    <button onclick="generateBestAnswer()">Generate Best Answer</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tool-panel result-panel">
+            <h2>Interview Training Result</h2>
+            <div id="interviewTrainingResult" class="result-box">
+                Your interview training result will appear here.
+            </div>
+        </div>
+    </section>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/interview-coach.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>AI Job Match - SkillBridge AI</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav class="navbar"><div class="logo">SkillBridge <span>AI</span></div><div class="nav-links" id="navLinks"></div></nav>
+<section class="tool-page-section"><div class="tool-page-header"><p class="tagline">AI Job Match</p><h1>Compare Your Resume With a Job Description</h1><p>Upload your resume, paste the JD, and check match percentage, missing skills, and improvement points.</p></div><div class="tool-grid"><div class="tool-panel"><h2>Upload Resume</h2><form id="resumeUploadForm"><input type="file" id="resumeFile" accept=".pdf" required><button type="submit">Upload Resume</button></form><p id="uploadMessage" class="message-text"></p><div class="active-file-card"><p id="activeResumeName">No resume uploaded yet.</p></div><p id="resumeStatus" class="message-text"></p></div><div class="tool-panel"><h2>Paste Job Description</h2><textarea id="jobDescription" placeholder="Paste job description here..."></textarea><div class="chat-actions"><button onclick="matchJobDescriptionWithAi()">Check Job Match</button><button onclick="openResumeBuilderWithJD()" class="secondary-btn">Build Resume For This JD</button></div></div></div><div class="tool-panel result-panel"><h2>Job Match Result</h2><div id="jobMatchResult" class="result-box">Your job match result will appear here.</div></div></section>
+<script src="js/navbar.js"></script><script src="js/job-match.js"></script>
+</body>
+</html>
